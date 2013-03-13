@@ -170,7 +170,7 @@ NSString * const NXOAuth2ClientConnectionContextTokenRefresh = @"tokenRefresh";
 - (NSURL *)authorizationURLWithRedirectURL:(NSURL *)redirectURL;
 {
     return [authorizeURL nxoauth2_URLByAddingParameters:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                         @"code", @"response_type",
+                                                         @"token", @"response_type",
                                                          clientId, @"client_id",
                                                          [redirectURL absoluteString], @"redirect_uri",
                                                          nil]];
